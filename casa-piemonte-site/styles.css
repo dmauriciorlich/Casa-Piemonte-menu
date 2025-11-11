@@ -1,0 +1,38 @@
+:root{
+  --bg:#fff;
+  --accent:#8b1a1a;
+  --muted:#666;
+  --container-width:1000px;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;
+  background:var(--bg);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:var(--container-width);margin:0 auto;padding:20px;}
+.site-header{background:linear-gradient(90deg,#f7f7f7,#fff);border-bottom:1px solid #eee;padding:18px 0}
+.site-header h1{margin:0;font-size:22px;text-align:right;color:var(--accent)}
+.site-header .subtitle{margin:0;font-size:13px;text-align:right;color:var(--muted)}
+
+.viewer{margin-top:18px}
+.pdf-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;margin-bottom:12px}
+.button{background:var(--accent);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+.button:hover{opacity:0.95}
+
+.embed-wrap{background:#f3f3f3;border-radius:var(--radius);overflow:hidden;border:1px solid #e6e6e6}
+.embed-wrap iframe{width:100%;height:80vh;border:0;display:block}
+
+.note{color:var(--muted);font-size:14px;margin-top:8px}
+
+.contact{margin-top:22px;padding:18px;background:#fff;border-radius:10px;border:1px solid #eee}
+.contact h2{margin:0 0 8px 0}
+.site-footer{padding:14px 0;text-align:center;color:#888;border-top:1px solid #f0f0f0;margin-top:28px}
+@media(max-width:600px){
+  .site-header h1,.site-header .subtitle{text-align:center}
+  .pdf-actions{justify-content:center}
+  .embed-wrap iframe{height:60vh}
+}
